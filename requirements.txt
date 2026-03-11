@@ -1,0 +1,17 @@
+# Core dependencies
+pandas>=1.3.0
+numpy>=1.21.0
+scikit-learn>=1.0.0
+matplotlib>=3.4.0
+seaborn>=0.11.0
+xgboost>=1.5.0
+
+# Deep learning (choose based on your system)
+torch>=1.12.0
+transformers>=4.20.0
+
+# Optional but recommended for JurisTransformer
+optuna>=3.0.0  # For hyperparameter optimization
+
+# Optional for graph neural networks (skip if you get errors)
+# torch-geometric>=2.2.0  # Complex installation, install separately if needed

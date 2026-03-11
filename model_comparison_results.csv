@@ -1,0 +1,12 @@
+Model,Accuracy,Macro F1,Time (sec)
+Random Forest,0.4338,0.4797,0.8
+Extra Trees,0.431,0.4651,0.7
+XGBoost,0.3856,0.4154,5.6
+Naive Bayes,0.3595,0.2975,0.1
+K-Nearest Neighbors,0.3294,0.2489,0.4
+AdaBoost,0.3294,0.2775,0.7
+Gradient Boosting,0.3169,0.3391,11.9
+Decision Tree,0.3169,0.3423,0.1
+MLP Neural Network,0.2589,0.1335,0.9
+Logistic Regression,0.2271,0.223,3.6
+Support Vector Machine (RBF),0.1369,0.1051,13.6
