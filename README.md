@@ -12,7 +12,7 @@ This repository contains a **complete end-to-end machine learning pipeline** for
 
 ---
 
-## ✨ Features
+##  Features
 
 - **Leakage-free preprocessing** (drops future information like voting outcomes)
 - **Advanced feature engineering**: polynomial interactions + binned features
@@ -63,3 +63,94 @@ This repository contains a **complete end-to-end machine learning pipeline** for
 ---
 
 ## 🛠 Project Structure
+
+judicial-ml/
+├── main.py                    # Run this → executes the full pipeline
+├── data_loader.py             # Data loading + advanced feature engineering
+├── base_models.py             # 11+ ML models + voting ensemble helper
+├── evaluation.py              # Visualization, confusion matrices, reports
+├── juris_transformer.py       # Full JurisTransformer (text + ensemble)
+├── simplified_juris.py        # Lightweight version (works on older environments)
+├── requirements.txt
+├── supreme_court.csv          # The dataset
+├── model_comparison_results.csv  # Example base model results
+└── plots/                     # ← Generated charts (created automatically)
+├── base_models_comparison.png
+├── best_model_confusion_matrix.png
+├── final_model_comparison.png
+├── juris_transformer_confusion_matrix.png
+
+
+
+
+##  Quick Start
+
+### 1. Clone repository
+```bash
+git clone https://github.com/YOUR_USERNAME/judicial-ml.git
+cd judicial-ml
+
+
+
+2. Create & activate virtual environment (recommended)
+Bashpython -m venv venv
+# Windows
+venv\Scripts\activate
+# macOS / Linux
+source venv/bin/activate
+3. Install dependencies
+Bashpip install -r requirements.txt
+Note: transformers is optional. The simplified JurisTransformer works without it.
+4. Run the full pipeline
+Bashpython main.py
+This will:
+
+Load and preprocess data
+Train & evaluate all base models
+Run JurisTransformer (3-fold CV)
+Generate comparison plots & save results
+
+ Configuration
+Change the dataset path in main.py if necessary:
+PythonDATA_PATH = "supreme_court.csv"   # ← adjust if needed
+ What You Get After Running
+
+Console: detailed metrics + classification report
+plots/ folder containing:
+Model comparison bar charts (Accuracy & Macro F1)
+Confusion matrix (best model + JurisTransformer)
+Feature importance plot
+Final comparison table (CSV)
+
+
+ Technical Highlights
+
+Class imbalance → handled via class_weight='balanced'
+No data leakage → voting & disposition columns removed
+Text feature engineering → legal term counts + basic statistics
+Ensemble voting inside JurisTransformer
+Compatible with scikit-learn versions before 1.2
+
+ Possible Next Steps
+
+Integrate BERT / legal language models
+Hyperparameter optimization (Optuna)
+Time-based train/test split (chronological)
+SHAP / LIME explanations for legal interpretability
+Citation network → Graph Neural Networks
+
+ Contributing
+Feel free to:
+
+Report bugs / suggest improvements (Issues)
+Submit pull requests (new models, better features, documentation)
+
+ License
+MIT License — see the LICENSE file for details.
+ Acknowledgments
+
+Supreme Court Database (SCDB)
+scikit-learn, XGBoost, pandas & visualization communities
+Legal AI & judicial prediction research community
+
+
