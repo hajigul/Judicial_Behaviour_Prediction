@@ -64,37 +64,36 @@ This repository contains a **complete end-to-end machine learning pipeline** for
 
 ## 🛠 Project Structure
 
-judicial-ml/
+judicial-ml/  
+│  
+├── main.py  
+│   └── Runs the full ML pipeline  
+│  
+├── data_loader.py  
+│   └── Data loading and feature engineering  
+│  
+├── base_models.py  
+│   └── 11+ ML models and voting ensemble utilities  
 │
-├── main.py
-│   └── Runs the full ML pipeline
+├── evaluation.py  
+│   └── Model evaluation, plots, confusion matrices  
 │
-├── data_loader.py
-│   └── Data loading and feature engineering
+├── juris_transformer.py  
+│   └── Full JurisTransformer implementation  
 │
-├── base_models.py
-│   └── 11+ ML models and voting ensemble utilities
-│
-├── evaluation.py
-│   └── Model evaluation, plots, confusion matrices
-│
-├── juris_transformer.py
-│   └── Full JurisTransformer implementation
-│
-├── simplified_juris.py
-│   └── Lightweight JurisTransformer (older environments)
-│
-├── requirements.txt
-│
-├── supreme_court.csv
-│   └── Dataset
-│
-├── model_comparison_results.csv
-│   └── Example model results
-│
-└── plots/
-    ├── base_models_comparison.png
-    ├── best_model_confusion_matrix.png
-    ├── final_model_comparison.png
-    └── juris_transformer_confusion_matrix.png
+├── simplified_juris.py  
+│   └── Lightweight JurisTransformer (older environments)  
+│  
+├── requirements.txt  
+│  
+├── supreme_court.csv  
+│   └── Dataset  
+│  
+├── model_comparison_results.csv  
+│   └── Example model results      
+└── plots/    
+    ├── base_models_comparison.png  
+    ├── best_model_confusion_matrix.png  
+    ├── final_model_comparison.png  
+    └── juris_transformer_confusion_matrix.png  
 
