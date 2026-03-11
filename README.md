@@ -97,3 +97,47 @@ judicial-ml/
     ├── final_model_comparison.png  
     └── juris_transformer_confusion_matrix.png  
 
+
+---
+
+##  Quick Start
+
+### 1. Clone repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/judicial-ml.git
+cd judicial-ml
+
+
+2. Create & activate virtual environment (recommended)
+bash
+python -m venv venv
+
+# Windows
+venv\Scripts\activate
+
+# macOS / Linux
+source venv/bin/activate
+3. Install dependencies
+bash
+pip install -r requirements.txt
+Note: transformers is optional. The simplified JurisTransformer works without it.
+
+4. Run the full pipeline
+bash
+python main.py
+This will:
+
+Load and preprocess data
+
+Train & evaluate all base models
+
+Run JurisTransformer (3-fold CV)
+
+Generate comparison plots & save results
+
+⚙️ Configuration
+Change the dataset path in main.py if necessary:
+
+python
+DATA_PATH = "supreme_court.csv"   # ← adjust if needed
